@@ -2,7 +2,7 @@ pipeline{
 	agent any
 	tools {maven "M3"}
 	stages{
-		stage("Checkout1"){
+		stage("Checkout0"){
 			steps{
                                 #Checkout
 				git branch: "main" , url: "https://github.com/ElRamo/SpringPetClinic.git"

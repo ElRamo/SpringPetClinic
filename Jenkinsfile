@@ -4,6 +4,7 @@ pipeline{
 	stages{
 		stage("Checkout"){
 			steps{
+                                #Checkout
 				git branch: "main" , url: "https://github.com/ElRamo/SpringPetClinic.git"
 			}
 		}

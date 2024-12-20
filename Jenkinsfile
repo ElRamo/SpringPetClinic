@@ -2,12 +2,6 @@ pipeline{
 	agent any
 	tools {maven "M3"}
 	stages{
-		stage("Checkout55"){
-			steps{
-                                #Checkout
-				git branch: "main" , url: "https://github.com/ElRamo/SpringPetClinic.git"
-			}
-		}
 		stage("Checkout"){
 			steps{
                                 #Checkout
@@ -32,6 +26,7 @@ pipeline{
 		}
 		stage("deploy"){
 			steps{
+                                sh "echo 'Deploy en cours'"
 				sh "java  -jar /home/coder/.jenkins/workspace/petclinicDeclarativePipeline/target/*.jar"
 			}
 		}
